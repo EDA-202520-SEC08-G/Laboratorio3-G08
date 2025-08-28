@@ -46,10 +46,16 @@ def first_element (my_list):
     print(al.first_element(my_list))
 
 def is_empty(my_list):
-    pass
+    size = my_list['size']
+    if size > 0:
+        empty = False
+    else:
+        empty = True
+    return empty
 
 def size(my_list):
-    pass
+    size = my_list['size']
+    return size
 
 def last_element(my_list):
     return last_element

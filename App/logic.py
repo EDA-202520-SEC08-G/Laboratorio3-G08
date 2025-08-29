@@ -99,7 +99,11 @@ def load_tags(catalog):
     :return: El número de tags cargados
     """
     # TODO Implementar la carga de los tags
-    pass
+    booksfile = data_dir + 'GoodReads/books-medium.csv'
+    input_file = csv.DictReader(open(booksfile, encoding='utf-8'))
+    for tags in input_file:
+        add_book_tag(catalog,tags)
+    return book_tag_size(catalog)
 
 
 def load_books_tags(catalog):
@@ -111,8 +115,7 @@ def load_books_tags(catalog):
     :return: El número de book_tags cargados
     """
     # TODO Implementar la carga de los book_tags
-    book_tags = logic.load_book_tags(catalog,"Goodreads/book_tags-small.csv")
-    return book_tags
+    pass
 
 
 # Funciones de consulta sobre el catálogo
@@ -255,7 +258,7 @@ def author_size(catalog):
     :return: El número de autores en el catálogo
     """
     # TODO Implementar la función de tamaño de autores
-    return set.size(catalog["author"])
+    pass
 
 
 def tag_size(catalog):
@@ -267,7 +270,7 @@ def tag_size(catalog):
     :return: El número de tags en el catálogo
     """
     # TODO Implementar la función de tamaño de tags
-    return set.size(catalog["tag"])
+    pass
 
 
 def book_tag_size(catalog):
@@ -279,7 +282,7 @@ def book_tag_size(catalog):
     :return: El número de book_tags en el catálogo
     """
     # TODO Implementar la función de tamaño de book_tags
-    return set.size(catalog["book_tag"])
+    pass
 
 
 # Funciones utilizadas para comparar elementos dentro de una lista
